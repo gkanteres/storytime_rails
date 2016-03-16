@@ -1,4 +1,5 @@
 class SentencesController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_sentence, only: [:show, :destroy, :edit, :update]
   before_action :set_story, only: [:show, :destroy, :edit, :update]
 

@@ -1,7 +1,7 @@
-<%= image_tag @sentence.image_url %><br />
-<%= @sentence.content %><br />
-
-<%= link_to 'Edit', edit_story_sentence_path(@story, @sentence) %><br />
+<%= image_tag @sentence.image_url %><br /><br />
+"<%= @sentence.content %>"<br /><br />
+(<i>added by:</i> <%= @sentence.user.username %>)<br />
+<%= link_to 'Edit Sentence', edit_story_sentence_path(@story, @sentence) %> |
 
 <%= link_to(story_sentence_path(@story, @sentence),
   data: {
@@ -9,3 +9,5 @@
     method: 'delete'}) do %>
     Delete Sentence
   <% end %>
+<br />
+<%= link_to 'Back to Story', (story_path(@story)) %>

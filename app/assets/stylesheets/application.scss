@@ -15,3 +15,9 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "sentences";
+
+ a {
+   font-size: 20px;
+   text-decoration: none !important;
+ }
